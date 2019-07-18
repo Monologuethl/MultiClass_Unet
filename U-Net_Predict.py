@@ -6,12 +6,14 @@ from __future__ import print_function
 
 import configparser as ConfigParser
 import warnings  # 不显示乱七八糟的warning
-
+import os
 from PIL import Image
 from keras import backend as K
 from keras.models import model_from_json
 
 from base_functions import get_test_data, pred_to_imgs
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 warnings.filterwarnings("ignore")
 K.set_image_dim_ordering('th')

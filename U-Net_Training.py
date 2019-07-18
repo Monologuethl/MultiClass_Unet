@@ -6,7 +6,7 @@ from __future__ import print_function
 import configparser as ConfigParser
 import os
 import warnings
-
+import os
 import numpy as np
 from keras import backend as K
 from keras.callbacks import ModelCheckpoint
@@ -16,6 +16,7 @@ from keras.optimizers import Adam
 
 from base_functions import get_train_data
 
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 warnings.filterwarnings("ignore")
 K.set_image_dim_ordering('th')
 
